@@ -9,9 +9,9 @@ CREATE TABLE S20_2_CUSTOMER(
     zipCode varchar(6),
     state_resident char(3),
     streetName varchar(15),
-    primary key(custID),
-    UNIQUE(emailID),
-)
+    PRIMARY KEY(custID),
+    UNIQUE(emailID)
+);
 
 CREATE TABLE S20_2_EMPLOYEE(
     empID char(9) not null,
@@ -20,7 +20,8 @@ CREATE TABLE S20_2_EMPLOYEE(
     DOB DATE,
     full_name varchar(30) not null,
     salary DECIMAL(8,2) not null,
-)
+    PRIMARY KEY(empID)
+);
 
 CREATE TABLE S20_2_PLANS(
     custID char(9) not null,
@@ -30,7 +31,21 @@ CREATE TABLE S20_2_PLANS(
     fromDate DATE not null,
     toDate DATE not null,
     invoice_date DATE not null,
-    date_of DATE not null,
-    adpayment 
-    GSO 
-)
+    adpayment DECIMAL(8,2),
+    GSO varchar(100),
+    PRIMARY KEY(commission, fromDate, toDate, invoice_date, adpayment, GSO),
+    FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
+        ON DELETE CASCADE,
+    FOREIGN KEY(empID) REFERENCES S20_2_EMPLOYEE(empID)
+        ON DELETE CASCADE,
+    FOREIGN KEY(PNR) REFERENCES S20_2_ --TODO: CREATE 'TRIP_DETAILS' TABLE FOR PNR
+);
+
+CREATE TABLE S20_2_RESERVES_AIRLINE(
+
+
+);
+
+CREATE TABLE S20_2_TRIP_DETAILS(
+
+);
