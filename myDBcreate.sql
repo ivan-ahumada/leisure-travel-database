@@ -2,7 +2,7 @@
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(25) not null,
-    emailID varchar(30) not null, -- making email imperative for signup
+    emailID varchar(30) not null, 
     custType varchar(10) not null,
     DOB DATE,
     gender varchar(7),
@@ -11,7 +11,7 @@ CREATE TABLE S20_2_CUSTOMER(
     streetName varchar(15),
     PRIMARY KEY(custID),
     UNIQUE(emailID)
-);
+); 
 
 CREATE TABLE S20_2_EMPLOYEE(
     empID char(9) not null,
@@ -38,14 +38,14 @@ CREATE TABLE S20_2_PLANS(
         ON DELETE CASCADE,
     FOREIGN KEY(empID) REFERENCES S20_2_EMPLOYEE(empID)
         ON DELETE CASCADE,
-    FOREIGN KEY(PNR) REFERENCES S20_2_ --TODO: CREATE 'TRIP_DETAILS' TABLE FOR PNR
-);
+    FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS --TODO: CREATE 'TRIP_DETAILS' TABLE FOR PNR
+); -- 
 
-CREATE TABLE S20_2_RESERVES_AIRLINE(
+--CREATE TABLE S20_2_RESERVES_AIRLINE(
 
 
-);
+--);
 
-CREATE TABLE S20_2_TRIP_DETAILS(
+--CREATE TABLE S20_2_TRIP_DETAILS(
 
-);
+--);
