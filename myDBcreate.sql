@@ -41,11 +41,23 @@ CREATE TABLE S20_2_PLANS(
     FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS --TODO: CREATE 'TRIP_DETAILS' TABLE FOR PNR
 ); -- 
 
---CREATE TABLE S20_2_RESERVES_AIRLINE(
+--TODO: Add additional attributes & info
+CREATE TABLE TRIP_DETAILS(
+    PNR VARCHAR(15) NOT NULL,
+    TRIP_NAME VARCHAR(20) NOT NULL,
+    PRIMARY KEY(PNR),
+);
 
+--TODO: Add additional attributes & info
+CREATE TABLE S20_2_RESERVES_AIRLINE(
+    custID char(9) not null,
+    flightNo varchar(7) not null,
+    PNR varchar(15) not null,
+    deptCity varchar(20) not null,
+    arrCity varchar(20) not null,
+    airlineCost decimal(6,2)
+);
 
---);
-
---CREATE TABLE S20_2_TRIP_DETAILS(
+--TODO: CREATE TABLE S20_2_TRIP_DETAILS(
 
 --);
