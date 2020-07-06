@@ -1,7 +1,7 @@
 -- Ivan Ahumada 1000854077
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
-    custName varchar(25) not null,
+    custName varchar(30) not null,
     emailID varchar(30) not null, 
     custType varchar(10) not null,
     DOB DATE,
@@ -31,7 +31,7 @@ CREATE TABLE S20_2_PLANS(
     fromDate DATE not null,
     toDate DATE not null,
     invoice_date DATE not null,
-    adpayment DECIMAL(8,2),
+    adpayment DECIMAL(7,2),
     GSO varchar(100),
     PRIMARY KEY(commission, fromDate, toDate, invoice_date, adpayment, GSO),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
