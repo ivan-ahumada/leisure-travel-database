@@ -32,23 +32,23 @@ CREATE TABLE S20_2_PLANS(
     toDate DATE not null,
     invoice_date DATE not null,
     adpayment DECIMAL(5,2),
-    GSO int, -- 0 = opted out, 1 = opted in
+    GSO int not null, -- 0 = opted out, 1 = opted in
     PRIMARY KEY(commission, fromDate, toDate, invoice_date, adpayment, GSO),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
         ON DELETE CASCADE,
     FOREIGN KEY(empID) REFERENCES S20_2_EMPLOYEE(empID)
         ON DELETE CASCADE,
-    FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS --TODO: CREATE 'TRIP_DETAILS' TABLE FOR PNR
-); -- 
-
---TODO: Add additional attributes & info
-CREATE TABLE TRIP_DETAILS(
-    PNR VARCHAR(15) NOT NULL,
-    TRIP_NAME VARCHAR(20) NOT NULL,
-    PRIMARY KEY(PNR),
+    FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS
 );
 
 --TODO: Add additional attributes & info
+CREATE TABLE S20_2_TRIP_DETAILS(
+    PNR VARCHAR(15) NOT NULL,
+    tripName VARCHAR(20) NOT NULL,
+    itineraryID 
+    PRIMARY KEY(PNR),
+);
+
 CREATE TABLE S20_2_RESERVES_AIRLINE(
     custID char(9) not null,
     flightNo varchar(7) not null,
@@ -56,8 +56,11 @@ CREATE TABLE S20_2_RESERVES_AIRLINE(
     deptCity varchar(20) not null,
     arrCity varchar(20) not null,
     airlineCost decimal(6,2)
+    PRIMARY KEY(deptCity,arrCity,airlineCost),
+    FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
+        ON DELETE CASCADE,
+    FOREIGN KEY(flightNo) REFERENCES S20_2_AIRLINE(flightNo)
+        ON DELETE CASCADE,
+    FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS(PNR)
+        ON DELETE CASCADE
 );
-
---TODO: CREATE TABLE S20_2_TRIP_DETAILS(
-
---);
