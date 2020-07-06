@@ -24,15 +24,15 @@ CREATE TABLE S20_2_EMPLOYEE(
 );
 
 CREATE TABLE S20_2_PLANS(
-    custID char(9) not null,
+    custID char(6) not null,
     empID char(9) not null,
     PNR varchar(15) not null,
-    commission DECIMAL(6,2) not null,
+    commission DECIMAL(5,2) not null,
     fromDate DATE not null,
     toDate DATE not null,
     invoice_date DATE not null,
-    adpayment DECIMAL(7,2),
-    GSO varchar(100),
+    adpayment DECIMAL(5,2),
+    GSO int, -- 0 = opted out, 1 = opted in
     PRIMARY KEY(commission, fromDate, toDate, invoice_date, adpayment, GSO),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
         ON DELETE CASCADE,
