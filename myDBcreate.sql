@@ -29,7 +29,7 @@ CREATE TABLE S20_2_AIRLINE(
     fuelCharge decimal(5,2),
     convFee decimal(4,2),
     PRIMARY KEY(flightNo)
-)
+);
 
 CREATE TABLE S20_2_TRIP_DETAILS(
     PNR VARCHAR(15) NOT NULL,
