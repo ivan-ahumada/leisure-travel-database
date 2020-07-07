@@ -49,7 +49,7 @@ INSERT ALL
     INTO S20_2_EMPLOYEE VALUES(
         '000000005', 'female', 'Isabella Robinson', '22-Oct-1989', 76226.44)
     INTO S20_2_EMPLOYEE VALUES(
-        '000000006', 'male', 'Oliver King', '30-Feb-1986', 73657.88)
+        '000000006', 'male', 'Oliver King', '04-Feb-1986', 73657.88)
     INTO S20_2_EMPLOYEE VALUES(
         '000000007', 'female', 'Sophia Torres', '29-Mar-1992', 79582.24)
     INTO S20_2_EMPLOYEE VALUES(
@@ -113,7 +113,7 @@ INSERT ALL
     INTO S20_2_PLANS VALUES(
         '000040000', '000000002', '357245', 220.33, '07-Jun-2018', '02-Jul-2018', '14-Jul-2018', 642.23, 1)
     INTO S20_2_PLANS VALUES(
-        '000030000', '000000003', '347626', 190.44, '10-Sep-2018', '17-Sep-2018', '24-Sept-2018', 356.83, 0)
+        '000030000', '000000003', '347626', 190.44, '10-Sep-2018', '17-Sep-2018', '24-Sep-2018', 356.83, 0)
     INTO S20_2_PLANS VALUES(
         '000020000', '000000004', '646245', 193.84, '05-Jun-2019', '18-Jun-2019', '03-Jul-2019', 542.88, 1)
     INTO S20_2_PLANS VALUES(

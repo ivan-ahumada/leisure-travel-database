@@ -1,3 +1,5 @@
+--TODO: Get upload to work for myDBoracle.sql on Omega>Oracle
+
 DROP TABLE S20_2_RESERVES_AIRLINE;
 DROP TABLE S20_2_PLANS;
 DROP TABLE S20_2_TRIP_DETAILS;
