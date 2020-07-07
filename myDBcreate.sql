@@ -9,7 +9,7 @@ CREATE TABLE S20_2_CUSTOMER(
     gender varchar(7),
     zipCode varchar(6),
     state_resident char(3),
-    streetName varchar(15),
+    streetName varchar(30),
     PRIMARY KEY(custID),
     UNIQUE(emailID)
 ); 
@@ -18,14 +18,14 @@ CREATE TABLE S20_2_EMPLOYEE(
     empID char(9) not null,
     gender varchar(7)
         check(gender = 'male' OR gender = 'female' OR gender = 'other'),
-    DOB DATE,
     full_name varchar(30) not null,
+    DOB DATE,
     salary DECIMAL(8,2) not null,
     PRIMARY KEY(empID)
 );
 
 CREATE TABLE S20_2_AIRLINE(
-    flightNo varchar(7) not null,
+    flightNo varchar(10) not null,
     fuelCharge decimal(5,2),
     convFee decimal(4,2),
     PRIMARY KEY(flightNo)
@@ -41,7 +41,7 @@ CREATE TABLE S20_2_TRIP_DETAILS(
 );
 
 CREATE TABLE S20_2_PLANS(
-    custID char(6) not null,
+    custID char(9) not null,
     empID char(9) not null,
     PNR varchar(15) not null,
     commission DECIMAL(5,2) not null,
