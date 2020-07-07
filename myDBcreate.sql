@@ -58,7 +58,7 @@ CREATE TABLE S20_2_RESERVES_AIRLINE(
     PNR varchar(15) not null,
     deptCity varchar(25) not null,
     arrCity varchar(25) not null,
-    airlineCost decimal(6,2)
+    airlineCost decimal(6,2),
     PRIMARY KEY(deptCity,arrCity,airlineCost),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
         ON DELETE CASCADE,
