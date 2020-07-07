@@ -26,7 +26,7 @@ CREATE TABLE S20_2_EMPLOYEE(
 
 CREATE TABLE S20_2_AIRLINE(
     flightNo varchar(10) not null,
-    fuelCharge decimal(5,2),
+    fuelCharge decimal(4,2),
     convFee decimal(4,2),
     PRIMARY KEY(flightNo)
 );
