@@ -142,36 +142,36 @@ SELECT * FROM DUAL;
 
 INSERT ALL
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'DL 1925', '', 'Birmingham', 'Nashville', 198.00)
+        '123456', 'DL 1925', '', 'Birmingham', 'Nashville', 198.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'DL 1407', '', 'Dallas', 'New York City', 197.00)
+        '837645', 'DL 1407', '', 'Dallas', 'New York City', 197.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'F9 1275', '', 'Trenton', 'Honolulu', 922.00)
+        '357245', 'F9 1275', '', 'Trenton', 'Honolulu', 922.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'B6 2883', '', 'New York City', 'Orlando', 177.00)
+        '347626', 'B6 2883', '', 'New York City', 'Orlando', 177.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'HA 171', '', 'Hilo', 'San Diego', 273.00)
+        '646245', 'HA 171', '', 'Hilo', 'San Diego', 273.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'F9 2135', '', 'Dallas', 'Las Vegas', 46.00) 
+        '452435', 'F9 2135', '', 'Dallas', 'Las Vegas', 46.00) 
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'UA 4279', '', 'Denver', 'Casper', 207.00)
+        '245255', 'UA 4279', '', 'Denver', 'Casper', 207.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'UA 5242', '', 'Colorado Springs', 'Helena', 278.00)
+        '256256', 'UA 5242', '', 'Colorado Springs', 'Helena', 278.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AA 2272', '', 'Oklahoma City', 'Little Rock', 186.00)
+        '965999', 'AA 2272', '', 'Oklahoma City', 'Little Rock', 186.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AS 3420', '', 'Reno', 'Portland', 137.00)
+        '757578', 'AS 3420', '', 'Reno', 'Portland', 137.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AA 5926', '', 'Albequerque', 'Phoenix', 97.00)
+        '986896', 'AA 5926', '', 'Albequerque', 'Phoenix', 97.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AS 881', '', 'Los Angeles', 'Seattle', 147.00)
+        '134651', 'AS 881', '', 'Los Angeles', 'Seattle', 147.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AA 2843', '', 'Sacramento', 'Bangor', 351.00)
+        '273575', 'AA 2843', '', 'Sacramento', 'Bangor', 351.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AA 2122', '', 'New York City', 'Washington D.C.', 107.00)
+        '764727', 'AA 2122', '', 'New York City', 'Washington D.C.', 107.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'NK 729', '', 'Tampa', 'Chicago', 64.00)
+        '735989', 'NK 729', '', 'Tampa', 'Chicago', 64.00)
     INTO S20_2_RESERVES_AIRLINE VALUES(
-        '', 'AA 4368', '', 'Miami', 'Austin', 51.00)
+        '556356', 'AA 4368', '', 'Miami', 'Austin', 51.00)
 SELECT * FROM DUAL;
 
