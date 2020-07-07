@@ -1,3 +1,5 @@
+-- Ivan Ahumada 1000854077
+
 -- The following update will give a discount 
 -- to all airline costs by 20%.
 -- This will drop some tickets below 200 dollars

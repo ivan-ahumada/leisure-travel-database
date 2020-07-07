@@ -1,4 +1,5 @@
 -- Ivan Ahumada 1000854077
+
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(30) not null,
@@ -23,6 +24,15 @@ CREATE TABLE S20_2_EMPLOYEE(
     PRIMARY KEY(empID)
 );
 
+CREATE TABLE S20_2_TRIP_DETAILS(
+    PNR VARCHAR(15) NOT NULL,
+    tripName VARCHAR(30) NOT NULL,
+    itineraryID VARCHAR(14) NOT NULL,
+    destination VARCHAR(20) NOT NULL,
+    PRIMARY KEY(PNR),
+    UNIQUE(itineraryID)
+);
+
 CREATE TABLE S20_2_PLANS(
     custID char(6) not null,
     empID char(9) not null,
@@ -40,15 +50,6 @@ CREATE TABLE S20_2_PLANS(
         ON DELETE CASCADE,
     FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS
         ON DELETE CASCADE
-);
-
-CREATE TABLE S20_2_TRIP_DETAILS(
-    PNR VARCHAR(15) NOT NULL,
-    tripName VARCHAR(30) NOT NULL,
-    itineraryID VARCHAR(14) NOT NULL,
-    destination VARCHAR(20) NOT NULL,
-    PRIMARY KEY(PNR),
-    UNIQUE(itineraryID)
 );
 
 CREATE TABLE S20_2_RESERVES_AIRLINE(
