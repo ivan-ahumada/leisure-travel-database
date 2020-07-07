@@ -24,6 +24,13 @@ CREATE TABLE S20_2_EMPLOYEE(
     PRIMARY KEY(empID)
 );
 
+CREATE TABLE S20_2_AIRLINE(
+    flightNo varchar(7) not null,
+    fuelCharge decimal(5,2),
+    convFee decimal(4,2),
+    PRIMARY KEY(flightNo)
+)
+
 CREATE TABLE S20_2_TRIP_DETAILS(
     PNR VARCHAR(15) NOT NULL,
     tripName VARCHAR(30) NOT NULL,
