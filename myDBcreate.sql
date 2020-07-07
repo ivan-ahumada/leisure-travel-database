@@ -39,22 +39,24 @@ CREATE TABLE S20_2_PLANS(
     FOREIGN KEY(empID) REFERENCES S20_2_EMPLOYEE(empID)
         ON DELETE CASCADE,
     FOREIGN KEY(PNR) REFERENCES S20_2_TRIP_DETAILS
+        ON DELETE CASCADE
 );
 
---TODO: Add additional attributes & info
 CREATE TABLE S20_2_TRIP_DETAILS(
     PNR VARCHAR(15) NOT NULL,
-    tripName VARCHAR(20) NOT NULL,
-    itineraryID 
+    tripName VARCHAR(30) NOT NULL,
+    itineraryID VARCHAR(14) NOT NULL,
+    destination VARCHAR(20) NOT NULL,
     PRIMARY KEY(PNR),
+    UNIQUE(itineraryID)
 );
 
 CREATE TABLE S20_2_RESERVES_AIRLINE(
     custID char(9) not null,
     flightNo varchar(7) not null,
     PNR varchar(15) not null,
-    deptCity varchar(20) not null,
-    arrCity varchar(20) not null,
+    deptCity varchar(25) not null,
+    arrCity varchar(25) not null,
     airlineCost decimal(6,2)
     PRIMARY KEY(deptCity,arrCity,airlineCost),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
