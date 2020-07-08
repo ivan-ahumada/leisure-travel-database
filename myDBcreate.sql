@@ -4,9 +4,11 @@ CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(30) not null,
     emailID varchar(30) not null, 
-    custType varchar(10) not null,
+    custType varchar(10) not null
+        CHECK(custType = 'leisure' OR custType = 'corporate'),
     DOB DATE,
-    gender varchar(7),
+    gender varchar(7)
+        CHECK(gender = 'male' OR gender = 'female' OR gender = 'other'),
     zipCode varchar(6),
     state_resident char(3),
     streetName varchar(30),
