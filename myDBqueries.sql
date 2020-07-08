@@ -18,11 +18,13 @@ HAVING MIN(DOB) > '01-Jan-1994';
   
 
 -- Query #2
--- This query 
+-- This query shows how an employee's salary correlates with
+-- state in which customer is a resident in 
 --
--- This query shows how a customer's gender correlates with their
--- respective customer type
-
+-- Helps see how much business is paying employee per state to see
+-- what states are money makers. Remember that employees make commission
+-- (Not considered extremely in depth)
+-- TODO: ROLLUP clause query
 
 
 -- Query #3
@@ -30,3 +32,4 @@ HAVING MIN(DOB) > '01-Jan-1994';
 --
 -- Shows how a customer's type correlates with their 
 -- respective age
+-- TODO: ROLLUP clause query

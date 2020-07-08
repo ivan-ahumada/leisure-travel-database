@@ -51,6 +51,7 @@ CREATE TABLE S20_2_PLANS(
     toDate DATE not null,
     invoice_date DATE not null,
     adpayment DECIMAL(5,2),
+    duePayment DECIMAL()
     GSO int not null, -- 0 = opted out, 1 = opted in
     PRIMARY KEY(commission, fromDate, toDate, invoice_date, adpayment, GSO),
     FOREIGN KEY(custID) REFERENCES S20_2_CUSTOMER(custID)
