@@ -307,5 +307,22 @@ FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY CUBE(gender,custType);
 
+-------------------------------------------Updates
+-- The following update will give a discount 
+-- to all airline costs by 20%.
+-- This will drop some tickets below 200 dollars
+-- making Query #1 select different tuples
+
+UPDATE S20_2_RESERVES_AIRLINE
+SET airlineCost = airlineCost - (airlineCost * 0.2)
+
+---------------------------------------Drop tables
+DROP TABLE S20_2_RESERVES_AIRLINE;
+DROP TABLE S20_2_PLANS;
+DROP TABLE S20_2_TRIP_DETAILS;
+DROP TABLE S20_2_AIRLINE;
+DROP TABLE S20_2_EMPLOYEE;
+DROP TABLE S20_2_CUSTOMER;
+
 -- Omega file upload statement
 commit; 
