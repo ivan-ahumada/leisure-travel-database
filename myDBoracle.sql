@@ -304,7 +304,7 @@ GROUP BY CUBE(gender,custType);
 -- This will drop some tickets below 200 dollars
 -- making Query #1 select different tuples
 UPDATE S20_2_RESERVES_AIRLINE
-SET airlineCost = airlineCost - (airlineCost * 0.2)
+SET airlineCost = airlineCost - (airlineCost * 0.2);
 
 -- The following update will update Natalia Perez's
 -- state of residency. 
