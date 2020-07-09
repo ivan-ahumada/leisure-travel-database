@@ -19,17 +19,16 @@ HAVING MIN(DOB) > '01-Jan-1994';
 
 -- Query #2
 -- This query shows which states spend the most on airline costs.
-
--- This helps by showing which states to invest more on advertisements.
-SELECT state_resident, sum(airlineCost)
+SELECT state_resident, SUM(airlineCost), COUNT(*) QTY
 FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY ROLLUP(state_resident);
 
 
 -- Query #3
--- This query
---
--- Shows how a customer's type correlates with their 
--- respective age
--- TODO: CUBE clause query
+-- This query show what type of customer spends more money based
+-- gender and customer type.
+SELECT custType, gender, SUM(airlineCost), COUNT(*) QTY_Customers
+FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
+WHERE c.custID = r.custID
+GROUP BY CUBE(gender,custType);
