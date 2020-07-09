@@ -316,6 +316,16 @@ GROUP BY CUBE(gender,custType);
 UPDATE S20_2_RESERVES_AIRLINE
 SET airlineCost = airlineCost - (airlineCost * 0.2)
 
+----------------------------UPDATE TEST
+SELECT COUNT(custID), custType
+FROM   S20_2_CUSTOMER
+WHERE  custID IN(
+    SELECT  custID
+    FROM    S20_2_RESERVES_AIRLINE
+    WHERE   airlineCost > 200)
+GROUP BY custType
+HAVING MIN(DOB) > '01-Jan-1994';
+
 ---------------------------------------Drop tables
 DROP TABLE S20_2_RESERVES_AIRLINE;
 DROP TABLE S20_2_PLANS;
