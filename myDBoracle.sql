@@ -307,7 +307,7 @@ GROUP BY CUBE(gender,custType);
 UPDATE S20_2_RESERVES_AIRLINE
 SET airlineCost = airlineCost - (airlineCost * 0.2);
 
-UPDATE S20_2_EMPLOYEES
+UPDATE S20_2_EMPLOYEE
 SET salary = salary + 1500;
 
 ------------------------------------------Queries Part #2
