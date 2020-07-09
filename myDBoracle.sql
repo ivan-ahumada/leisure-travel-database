@@ -1,3 +1,5 @@
+spool myOutput.csv -- testing spool
+
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(30) not null,
@@ -350,6 +352,9 @@ DROP TABLE S20_2_TRIP_DETAILS;
 DROP TABLE S20_2_AIRLINE;
 DROP TABLE S20_2_EMPLOYEE;
 DROP TABLE S20_2_CUSTOMER;
+
+
+spool off -- testing spool
 
 -- Omega file upload statement
 commit; 
