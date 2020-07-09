@@ -1,0 +1,151 @@
+SQL> @ myDBoracle.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+16 rows created.
+
+
+16 rows created.
+
+
+16 rows created.
+
+
+16 rows created.
+
+
+16 rows created.
+
+
+16 rows created.
+
+
+COUNT(CUSTID) CUSTTYPE                                                          
+------------- ----------                                                        
+            2 leisure                                                           
+
+
+STA SUM(AIRLINECOST)        QTY                                                 
+--- ---------------- ----------                                                 
+AL               198          1                                                 
+CA               498          2                                                 
+CO               485          2                                                 
+FL               115          2                                                 
+HI               273          1                                                 
+NJ               922          1                                                 
+NM                97          1                                                 
+NV               137          1                                                 
+NY               284          2                                                 
+OK               186          1                                                 
+TX               243          2                                                 
+
+STA SUM(AIRLINECOST)        QTY                                                 
+--- ---------------- ----------                                                 
+                3438         16                                                 
+
+12 rows selected.
+
+
+CUSTTYPE   GENDER  SUM(AIRLINECOST) QTY_CUSTOMERS                               
+---------- ------- ---------------- -------------                               
+                               3438            16                               
+leisure                        1873             8                               
+corporate                      1565             8                               
+           male                1556             8                               
+leisure    male                 531             3                               
+corporate  male                1025             5                               
+           other                137             1                               
+leisure    other                137             1                               
+           female              1745             7                               
+leisure    female              1205             4                               
+corporate  female               540             3                               
+
+11 rows selected.
+
+
+16 rows updated.
+
+
+1 row updated.
+
+
+COUNT(CUSTID) CUSTTYPE                                                          
+------------- ----------                                                        
+            1 leisure                                                           
+
+
+STA SUM(AIRLINECOST)        QTY                                                 
+--- ---------------- ----------                                                 
+AL             158.4          1                                                 
+CA             398.4          2                                                 
+CO             428.8          3                                                 
+FL              51.2          1                                                 
+HI             218.4          1                                                 
+NJ             737.6          1                                                 
+NM              77.6          1                                                 
+NV             109.6          1                                                 
+NY             227.2          2                                                 
+OK             148.8          1                                                 
+TX             194.4          2                                                 
+
+STA SUM(AIRLINECOST)        QTY                                                 
+--- ---------------- ----------                                                 
+              2750.4         16                                                 
+
+12 rows selected.
+
+
+CUSTTYPE   GENDER  SUM(AIRLINECOST) QTY_CUSTOMERS                               
+---------- ------- ---------------- -------------                               
+                             2750.4            16                               
+leisure                      1498.4             8                               
+corporate                      1252             8                               
+           male              1244.8             8                               
+leisure    male               424.8             3                               
+corporate  male                 820             5                               
+           other              109.6             1                               
+leisure    other              109.6             1                               
+           female              1396             7                               
+leisure    female               964             4                               
+corporate  female               432             3                               
+
+11 rows selected.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Commit complete.
+
+SQL> spool off
