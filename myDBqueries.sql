@@ -18,18 +18,17 @@ HAVING MIN(DOB) > '01-Jan-1994';
   
 
 -- Query #2
--- This query shows how an employee's salary correlates with
--- state in which customer is a resident in 
---
--- Helps see how much business is paying employee per state to see
--- what states are money makers. Remember that employees make commission
--- (Not considered extremely in depth)
--- TODO: ROLLUP clause query
+-- This query shows which states spend the most on airline costs.
+SELECT state_resident, SUM(airlineCost), COUNT(*) QTY
+FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
+WHERE c.custID = r.custID
+GROUP BY ROLLUP(state_resident);
 
 
 -- Query #3
--- This query
---
--- Shows how a customer's type correlates with their 
--- respective age
--- TODO: ROLLUP clause query
+-- This query show what type of customer spends more money based
+-- gender and customer type.
+SELECT custType, gender, SUM(airlineCost), COUNT(*) QTY_Customers
+FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
+WHERE c.custID = r.custID
+GROUP BY CUBE(gender,custType);

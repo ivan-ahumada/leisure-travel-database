@@ -46,7 +46,7 @@ CREATE TABLE S20_2_PLANS(
     custID char(9) not null,
     empID char(9) not null,
     PNR varchar(15) not null,
-    commission DECIMAL(5,2) not null,
+    commission DECIMAL(5,2),
     fromDate DATE not null,
     toDate DATE not null,
     invoice_date DATE not null,
