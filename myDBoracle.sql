@@ -1,3 +1,4 @@
+--------------------------------------------Create Tables
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(30) not null,
@@ -73,6 +74,7 @@ CREATE TABLE S20_2_RESERVES_AIRLINE(
         ON DELETE CASCADE
 );
 
+--------------------------------------------------Inserts
 INSERT ALL
     INTO S20_2_CUSTOMER VALUES(
         '000000000', 'Olivia Smith', 'olivia.smith@gmail.com', 'corporate', '06-Jul-1988', 'female', '35044', 'AL', 'Crown Lane')
@@ -267,7 +269,7 @@ INSERT ALL
         '000060000', 'AA 4368', '556356', 'Miami', 'Austin', 51.00)
 SELECT * FROM DUAL;
 
-------------------------------------------Queries
+--------------------------------------------------Queries
 -- Query #1
 -- This query selects # of customers & their type that were born
 -- after January 1, 1994 spent over 200 dollars on their flight.
@@ -298,7 +300,7 @@ FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY CUBE(gender,custType);
 
--------------------------------------------Updates
+--------------------------------------------------Updates
 -- The following update will give a discount 
 -- to all airline costs by 20%.
 -- This will drop some tickets below 200 dollars
@@ -343,7 +345,7 @@ FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY CUBE(gender,custType);
 
----------------------------------------Drop tables
+----------------------------------------------Drop tables
 DROP TABLE S20_2_RESERVES_AIRLINE;
 DROP TABLE S20_2_PLANS;
 DROP TABLE S20_2_TRIP_DETAILS;
