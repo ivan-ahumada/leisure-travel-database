@@ -1,4 +1,9 @@
---------------------------------------------Create Tables
+/*
+  _____             __        ______     __   __   
+ / ___/______ ___ _/ /____   /_  __/__ _/ /  / /__ 
+/ /__/ __/ -_) _ `/ __/ -_)   / / / _ `/ _ \/ / -_)
+\___/_/  \__/\_,_/\__/\__/   /_/  \_,_/_.__/_/\__/ 
+*/                                               
 CREATE TABLE S20_2_CUSTOMER(
     custID char(9) not null,
     custName varchar(30) not null,
@@ -74,7 +79,12 @@ CREATE TABLE S20_2_RESERVES_AIRLINE(
         ON DELETE CASCADE
 );
 
---------------------------------------------------Inserts
+/*
+   ____                 __    
+  /  _/__  ___ ___ ____/ /____
+ _/ // _ \(_-</ -_) __/ __(_-<
+/___/_//_/___/\__/_/  \__/___/
+*/
 INSERT ALL
     INTO S20_2_CUSTOMER VALUES(
         '000000000', 'Olivia Smith', 'olivia.smith@gmail.com', 'corporate', '06-Jul-1988', 'female', '35044', 'AL', 'Crown Lane')
@@ -268,8 +278,13 @@ INSERT ALL
     INTO S20_2_RESERVES_AIRLINE VALUES(
         '000060000', 'AA 4368', '556356', 'Miami', 'Austin', 51.00)
 SELECT * FROM DUAL;
-
---------------------------------------------------Queries
+                           
+/*
+  ____               _       
+ / __ \__ _____ ____(_)__ ___
+/ /_/ / // / -_) __/ / -_|_-<
+\___\_\_,_/\__/_/ /_/\__/___/
+*/
 -- Query #1
 -- This query selects # of customers & their type that were born
 -- after January 1, 1994 spent over 200 dollars on their flight.
@@ -300,7 +315,14 @@ FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY CUBE(gender,custType);
 
---------------------------------------------------Updates
+/*
+  __  __        __     __        
+ / / / /__  ___/ /__ _/ /____ ___
+/ /_/ / _ \/ _  / _ `/ __/ -_|_-<
+\____/ .__/\_,_/\_,_/\__/\__/___/
+    /_/       
+*/
+    
 -- The following update will give a discount 
 -- to all airline costs by 20%.
 -- This will drop some tickets below 200 dollars
@@ -314,7 +336,13 @@ UPDATE S20_2_CUSTOMER
 SET state_resident = 'CO'
 WHERE custID = '000060000';
 
-------------------------------------------Queries Part #2
+/*
+  ____               _                         __    ___ 
+ / __ \__ _____ ____(_)__ ___   ___  ___ _____/ /_  |_  |
+/ /_/ / // / -_) __/ / -_|_-<  / _ \/ _ `/ __/ __/ / __/ 
+\___\_\_,_/\__/_/ /_/\__/___/ / .__/\_,_/_/  \__/ /____/ 
+                             /_/                        
+*/                             
 -- Query #1
 -- This query selects # of customers & their type that were born
 -- after January 1, 1994 spent over 200 dollars on their flight.
@@ -345,7 +373,13 @@ FROM S20_2_CUSTOMER c, S20_2_RESERVES_AIRLINE r
 WHERE c.custID = r.custID
 GROUP BY CUBE(gender,custType);
 
-----------------------------------------------Drop tables
+/*
+   ___                  ______     __   __      
+  / _ \_______  ___    /_  __/__ _/ /  / /__ ___
+ / // / __/ _ \/ _ \    / / / _ `/ _ \/ / -_|_-<
+/____/_/  \___/ .__/   /_/  \_,_/_.__/_/\__/___/
+             /_/                                
+*/
 DROP TABLE S20_2_RESERVES_AIRLINE;
 DROP TABLE S20_2_PLANS;
 DROP TABLE S20_2_TRIP_DETAILS;
